@@ -1,0 +1,62 @@
+﻿记录ID,中文样例,英文样例,中文里的物品,英文里的物品
+1015,收橙色药水大量,B> Orange Potions bulk,橙色药水,orange
+7715,卖青铜头盔,S> Bronze Helmet,青铜头盔,bronze helmet
+7716,收青铜头盔,B> Bronze Helmet,青铜头盔,bronze helmet
+7749,卖黄皮制铠甲,S> Pink Starry Shirt,黄皮制铠甲,pink starry shirt
+7750,收黄皮制铠甲,B> Pink Starry Shirt,黄皮制铠甲,pink starry shirt
+7757,卖铁制轻便手套,S> Black Cat Gloves,铁制轻便手套,black cat gloves
+7758,收铁制轻便手套,B> Black Cat Gloves,铁制轻便手套,black cat gloves
+7761,卖黑勇气手套,S> Red Moon Gloves,黑勇气手套,red moon gloves
+7762,收黑勇气手套,B> Red Moon Gloves,黑勇气手套,red moon gloves
+7763,卖黑侠客手套,S> Blue Moon Gloves,黑侠客手套,blue moon gloves
+7764,收黑侠客手套,B> Blue Moon Gloves,黑侠客手套,blue moon gloves
+7765,卖红侠客手套,S> Brown Moon Gloves,红侠客手套,brown moon gloves
+7766,收红侠客手套,B> Brown Moon Gloves,红侠客手套,brown moon gloves
+7779,卖古老木盾,S> Red Triangular Shield,古老木盾,red triangular shield
+7780,收古老木盾,B> Red Triangular Shield,古老木盾,red triangular shield
+7833,卖绿锦丝鞋,S> Gold Moon Shoes,绿锦丝鞋,gold moon shoes
+7834,收绿锦丝鞋,B> Gold Moon Shoes,绿锦丝鞋,gold moon shoes
+7845,卖绿流星鞋,S> Black Red-Lined Shoes,绿流星鞋,black red-lined shoes
+7846,收绿流星鞋,B> Black Red-Lined Shoes,绿流星鞋,black red-lined shoes
+7847,卖黄流星鞋,S> Black Blue-Lined Shoes,黄流星鞋,black blue-lined shoes
+7848,收黄流星鞋,B> Black Blue-Lined Shoes,黄流星鞋,black blue-lined shoes
+7849,卖黄月鞋,S> Pink Goldwind Shoes,黄月鞋,pink goldwind shoes
+7850,收黄月鞋,B> Pink Goldwind Shoes,黄月鞋,pink goldwind shoes
+7861,卖蝴蝶结红皮鞋,S> Wizet Plain Shoes,红皮鞋,wizet plain shoes
+7862,收蝴蝶结红皮鞋,B> Wizet Plain Shoes,红皮鞋,wizet plain shoes
+7885,卖梅花耳环,S> Red-Hearted Earrings,梅花耳环,red-hearted earrings
+7886,收梅花耳环,B> Red-Hearted Earrings,梅花耳环,red-hearted earrings
+7897,卖敏捷药水,S> Warrior Potion,敏捷药水,warrior potion
+7898,收敏捷药水,B> Warrior Potion,敏捷药水,warrior potion
+7899,卖速度药水,S> Magic Potion,速度药水,magic potion
+7900,收速度药水,B> Magic Potion,速度药水,magic potion
+7901,卖魔力神水,S> Sniper Potion,魔力神水,sniper potion
+7902,收魔力神水,B> Sniper Potion,魔力神水,sniper potion
+7905,卖攻击神水,S> Speed Potion,攻击神水,speed potion
+7906,收攻击神水,B> Speed Potion,攻击神水,speed potion
+7920,卖废矿回城卷轴,S> Return Scroll to Forgotten Hollow,回城卷轴,return scroll to forgotten hollow
+7921,收废矿回城卷轴,B> Return Scroll to Forgotten Hollow,回城卷轴,return scroll to forgotten hollow
+7930,卖青铜弩矢,S> Bronze Arrow for Crossbow,青铜弩矢,crossbow
+7931,收青铜弩矢,B> Bronze Arrow for Crossbow,青铜弩矢,crossbow
+7952,卖鳄鱼皮,S> Lorang Claw,鳄鱼皮,lorang claw
+10774,收雪花镖，带价密,"B> Snowball stars, whisper price",雪花镖,snowball
+10849,卖蓝色蜗牛壳，带价,"S> Jr. Sentinel Shellpiece, offer",蓝色蜗牛壳,jr. sentinel shellpiece
+10850,收蓝色蜗牛壳，便宜的来,"B> Jr. Sentinel Shellpiece, cheap preferred",蓝色蜗牛壳,jr. sentinel shellpiece
+10851,求估价蓝色蜗牛壳,PC> Jr. Sentinel Shellpiece,蓝色蜗牛壳,jr. sentinel shellpiece
+10852,我需要蓝色蜗牛壳做任务,I need Jr. Sentinel Shellpiece for quest,蓝色蜗牛壳,jr. sentinel shellpiece
+10854,卖花蘑菇盖，带价,"S> Snail Shell, offer",花蘑菇盖,snail shell
+10855,收花蘑菇盖，便宜的来,"B> Snail Shell, cheap preferred",花蘑菇盖,snail shell
+10856,求估价花蘑菇盖,PC> Snail Shell,花蘑菇盖,snail shell
+10857,我需要花蘑菇盖做任务,I need Snail Shell for quest,花蘑菇盖,snail shell
+10864,卖野猪尖牙，带价,"S> Charm of the Undead, offer",野猪尖牙,charm of the undead
+10865,收野猪尖牙，便宜的来,"B> Charm of the Undead, cheap preferred",野猪尖牙,charm of the undead
+10866,求估价野猪尖牙,PC> Charm of the Undead,野猪尖牙,charm of the undead
+10867,我需要野猪尖牙做任务,I need Charm of the Undead for quest,野猪尖牙,charm of the undead
+10869,卖动物皮，带价,"S> Wild Boar Tooth, offer",动物皮,wild boar tooth
+10870,收动物皮，便宜的来,"B> Wild Boar Tooth, cheap preferred",动物皮,wild boar tooth
+10871,求估价动物皮,PC> Wild Boar Tooth,动物皮,wild boar tooth
+10872,我需要动物皮做任务,I need Wild Boar Tooth for quest,动物皮,wild boar tooth
+10874,卖诅咒娃娃，带价,"S> Lupin's Banana, offer",诅咒娃娃,lupin's banana
+10875,收诅咒娃娃，便宜的来,"B> Lupin's Banana, cheap preferred",诅咒娃娃,lupin's banana
+10876,求估价诅咒娃娃,PC> Lupin's Banana,诅咒娃娃,lupin's banana
+10877,我需要诅咒娃娃做任务,I need Lupin's Banana for quest,诅咒娃娃,lupin's banana
