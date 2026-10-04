@@ -50,6 +50,8 @@ pwsh -File build.ps1
 
 产物：`dist/ClassicWorld翻译助手-v1.0.1.zip`。版本由 `app.py` 中的 `APP_VERSION` 控制。
 
+以后每次发布自动递增版本号，并先核对 GitHub 已发布版本：修复升补丁号，新增功能升次版本号，不兼容改动升主版本号。窗口、exe 属性、ZIP 与 Release tag 同步更新；仅修改文档不另发安装包。
+
 公开源码的运行核心在 `vendor/`，聊天词库在 `data/`，不依赖作者电脑上的 Skill。普通打包直接使用随仓库发布的数据；维护者的 `pwsh -File build.ps1 -RefreshData` 才调用 `prepare_data.py` 从本机 `cw-chat-assistant` Skill 重新导出，之后需要审查新的数据与核心快照。
 
 `build.ps1` 执行单元测试、真实窗口冒烟测试、PyInstaller 打包、密钥与个人配置扫描，再生成 ZIP。测试默认不调用付费 API；`smoke_app.py --network` 会真实使用当前环境中的 Key。
