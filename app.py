@@ -17,7 +17,7 @@ from engine import DATA_DIR, ROUTE_NAMES, Engine, Phrasebook  # noqa: E402
 from settings import USER_DIR, Settings  # noqa: E402
 
 APP_NAME = "ClassicWorld 翻译助手"
-APP_VERSION = "1.0.1"  # X.Y.Z: X breaking change, Y new feature, Z fix
+APP_VERSION = "1.0.2"  # X.Y.Z: X breaking change, Y new feature, Z fix
 DEEPSEEK_KEYS_URL = "https://platform.deepseek.com/api_keys"
 FONT = "Microsoft YaHei UI"
 # Palette sampled from the game's own UI sprites (UI QuestCategory.img: teal #2288aa, light #bbddee,

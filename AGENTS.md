@@ -7,3 +7,5 @@
 - 发布 GitHub Release 时附 Windows ZIP、SHA256 和简要更新说明；资产名称使用 ClassicWorld-Translator-vX.Y.Z-Windows.zip。
 - API Key、个人配置、聊天缓存、环境变量文件和本地开发记录不得进入公开仓库或发布包。提交前跑 tools/scan_public.py，发布前跑单元测试和窗口冒烟测试。
 - 用户数据目录保留 `%APPDATA%\CWTranslator`，exe 保留 CWTranslator.exe，以兼容升级。
+- README 面向游戏玩家：优先下载、使用、Key 与常见问题，避免开发术语；开发步骤放 docs/开发说明.md，来源与授权放 docs/资料来源.md。
+- 用户已确认：软件由用户编写，词库由用户整理，词库来源注明 https://mscw-guidebook.com/；软件代码和作者整理的发布词库采用 MIT，官方游戏图标与第三方组件保留各自权属与许可。

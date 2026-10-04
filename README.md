@@ -1,73 +1,85 @@
 # ClassicWorld 翻译助手
 
-Windows 悬浮翻译小窗，面向冒险岛 Classic World 的交易、组队和日常聊天。输入中文（或其他语言），得到玩家常用的英文简写，自动复制并切回游戏，由你自己按 Ctrl+V 和回车发送。
+给冒险岛 Classic World 玩家用的中文喊话小工具。
 
-例如：`废弃都市组队任务来法师三缺一 → R> KPQ mage 3/4`，`收柠檬100个 → B> Lemon x100`。
+游戏里不知道怎么用英文收东西、找队伍？把中文打进去，就能得到玩家常用的英文简写。工具会帮你复制好，回游戏粘贴即可。
 
-## 使用
+例如：
 
-下载 [Releases](https://github.com/a16797/classicworld-translator/releases) 中的 Windows ZIP，完整解压，双击 `CWTranslator.exe`。详细说明见 [使用说明.txt](使用说明.txt)。
+- 废弃都市组队任务来法师三缺一 → `R> KPQ mage 3/4`
+- 收柠檬100个 → `B> Lemon x100`
+- 给我圣火 → `HB pls`
 
-- 默认快捷键：Ctrl+Alt+Q；可在设置里直接录入其他组合。
-- 词库与常用喊话可离线使用；新句子需要你自己的 DeepSeek API Key。
-- 下拉列表能查物品、怪物、地图、NPC、技能和现成说法。
-- 改过的译文点“复制”后记入“我的喊话表”。
-- 当前为中→英喊话模式，不包含截图识别或完整的英→中阅读页。
+## 怎么开始用？
 
-程序未签名。如果 Windows 显示未知发布者，请先核对下载来源与发布页的 SHA256；不要因为“未签名”就直接判断安全或不安全。
+1. 打开 [下载页面](https://github.com/a16797/classicworld-translator/releases/latest)，下载名称里带 `Windows.zip` 的文件。不要下载 Source code，那是给开发者看的。
+2. 把 ZIP 完整解压到一个文件夹，不要直接在压缩包里运行。
+3. 双击 `CWTranslator.exe`。不需要安装 Python。
+4. 进入游戏后按 **Ctrl+Alt+Q**，输入中文，按回车。
+5. 小窗会复制结果并切回游戏。点进聊天框，按 **Ctrl+V** 粘贴，再按回车发送。
 
-## API Key 与本地数据
+工具不会替你发送消息，发出去前可以自己看一眼。游戏设成窗口或无边框窗口，切换一般更方便。
 
-设置页显示当前 Key 来源、配置文件路径，并提供“打开数据文件夹”。
+## 一定要填 API Key 吗？
 
-所有个人数据在 `%APPDATA%\CWTranslator\`，与程序安装目录分开：
+不用。工具自带常用喊话和物品、怪物、地图等中英名称，这些可以直接查，不用联网。
 
-| 文件 | 内容 |
-| --- | --- |
-| `settings.json` | 设置与 Windows DPAPI 加密后的 Key；不写明文 Key |
-| `我的喊话表.csv` | 你修改并保存的中英喊话 |
-| `cache.json` | 联网翻译缓存 |
-| `usage.json` | 候选的使用次数 |
+遇到词库里没有的新句子，才需要用 DeepSeek 翻译：
 
-已保存 Key 优先；未保存时，可选择使用本机 `DEEPSEEK_API_KEY` 环境变量。勾选“清除 Key 并停用环境变量”并保存后，本程序不再使用这两种 Key；不会删除其他程序共用的 Windows 环境变量。
+1. 在工具的“设置”里点“打开 DeepSeek 申请页”。
+2. 登录 DeepSeek，创建自己的 API Key。
+3. 复制 Key，粘贴到工具里，点“测试”，通过后点“保存”。
 
-本地命中不发送翻译请求；新句子通过 HTTPS 发往固定的 DeepSeek 官方 API，Key 放在 Authorization 头中用于认证。程序不上传个人配置、喊话表或缓存文件，也不设中转服务器。窗口可能提前建立 TLS 连接，但不会为此发送 Key 或聊天文本。
+**Key 可以理解为你自己的 DeepSeek 使用凭证。不要发给别人。** DeepSeek 联网翻译按用量收费，费用由你的 DeepSeek 账户支付；没有 Key 也能继续用本地词库。
 
-DPAPI 使用当前 Windows 用户身份保护 Key，不能防住已经以同一用户身份运行的恶意软件。跨电脑或用户复制加密配置后，可能需要重新填写 Key。参考 [Microsoft DPAPI 文档](https://learn.microsoft.com/en-us/windows/win32/api/dpapi/nf-dpapi-cryptprotectdata) 和 [DeepSeek 认证文档](https://api-docs.deepseek.com/api/deepseek-api/)。
+## 还有哪些方便的用法？
 
-## 源码运行与打包
+- 只输入几个字，比如“招人”“圣火”“柠檬”，下面就会出现现成说法，选一条即可复制。
+- 输入“收／卖／换 + 物品名”，会帮你拼出交易喊话。
+- 翻得不满意，可以直接改结果，再点“复制”。工具会记住你改过的说法。
+- 快捷键和翻译后是否切回游戏，都能在“设置”里改。
+- 按 Esc 可以收起小窗；右下角托盘图标可以打开设置或退出。
 
-需要 Windows、Python 3.11 或更新版本、PowerShell 7：
+目前主要用于把中文喊话翻成英文简写，还没有截图翻译和完整的英文任务阅读功能。
 
-```powershell
-python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
-.\.venv\Scripts\python.exe app.py
-.\.venv\Scripts\python.exe -m unittest discover -s tests -p 'test_*.py'
-.\.venv\Scripts\python.exe tests\smoke_app.py
-pwsh -File build.ps1
-```
+## 我的 Key 和记录存在哪里？
 
-产物：`dist/ClassicWorld翻译助手-v1.0.1.zip`。版本由 `app.py` 中的 `APP_VERSION` 控制。
+都在你自己的电脑上。进入“设置”→“打开数据文件夹”就能找到。
 
-以后每次发布自动递增版本号，并先核对 GitHub 已发布版本：修复升补丁号，新增功能升次版本号，不兼容改动升主版本号。窗口、exe 属性、ZIP 与 Release tag 同步更新；仅修改文档不另发安装包。
+Key 加密保存在 `%APPDATA%\CWTranslator\settings.json`，你改过的句子、翻译记录也在这个文件夹。不要把这个文件夹发给别人。
 
-公开源码的运行核心在 `vendor/`，聊天词库在 `data/`，不依赖作者电脑上的 Skill。普通打包直接使用随仓库发布的数据；维护者的 `pwsh -File build.ps1 -RefreshData` 才调用 `prepare_data.py` 从本机 `cw-chat-assistant` Skill 重新导出，之后需要审查新的数据与核心快照。
+使用 DeepSeek 时，你输入的句子会发给 DeepSeek 翻译，Key 用来确认是你的账户；工具没有自己的中转服务器。
 
-`build.ps1` 执行单元测试、真实窗口冒烟测试、PyInstaller 打包、密钥与个人配置扫描，再生成 ZIP。测试默认不调用付费 API；`smoke_app.py --network` 会真实使用当前环境中的 Key。
+想停用 Key，在设置里勾选“清除 Key 并停用环境变量”，再保存即可。
 
-## 翻译顺序
+## 常见问题
 
-我的／默认喊话表 → 本地翻译缓存 → 内置短句与词库原句 → DeepSeek。
+**快捷键没有反应？**
 
-聊天词库包含 7,326 条名称与聊天词条、1,892 句原句直出。61 条中英物品不一致的样例不用于整句直出，清单在 `data/待核对样例.csv`。缓存按词库、模型与提示词版本区分。
+可能和其他软件冲突，到“设置”里换一个组合键。
 
-## 安全与验证
+**提示 Key 不对、余额不足或联网超时？**
 
-见 [安全说明](SECURITY.md)。公开仓库和发布包不包含个人设置、环境变量文件、聊天缓存或本地开发记录。
+检查自己的 DeepSeek Key、账户余额和网络。本地词库仍然可以使用。
 
-窗口流程与本地翻译有自动测试。真实游戏的粘贴支持、独占全屏切换、管理员权限场景以及其他电脑的 SmartScreen／杀毒软件表现仍需实际验证；设置按 70 个字符提醒，游戏聊天的真实上限尚未核实。
+**Windows 提示“未知发布者”？**
 
-## 数据来源
+目前程序没有签名。请确认文件来自本项目的 GitHub 下载页；下载页也提供文件校验码，供需要的人核对。
 
-游戏名称来自 MSCW 名称资料，词库还包含游戏常用英文、词语和句子。导出的聊天名称资料按已获授权的范围随工具分发，不包含完整资料库、任务对话或个人历史。红枫叶图标取自游戏素材，其权利属于原权利人。本项目是非官方工具。
+**怎么更新？**
+
+退出正在运行的旧版，解压新版并打开。个人设置和喊话表放在电脑的用户数据文件夹里，更新程序不会覆盖它们。
+
+## 资料从哪里来？是不是开源？
+
+软件由本项目作者自行开发，词库由作者整理，资料来源于 [MSCW Guidebook](https://mscw-guidebook.com/) 和作者整理的玩家常用英文、词语与句子。
+
+软件代码和作者整理的词库采用 [MIT 开源许可证](LICENSE)，可以使用、修改和分享，保留原作者署名与许可证即可。
+
+红枫叶图标来自游戏官方素材，权利属于原权利人，不纳入本项目的 MIT 授权。本工具是非官方玩家工具。
+
+详细的出处和使用范围见 [资料来源与授权说明](docs/资料来源.md)。发现译名不对，可以到 [问题反馈](https://github.com/a16797/classicworld-translator/issues) 留下原句和建议译法，不要贴自己的 Key。
+
+---
+
+想自己改代码或打包？看 [开发说明](docs/开发说明.md)。普通玩家不用看这一部分。

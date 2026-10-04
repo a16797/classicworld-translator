@@ -1,0 +1,2 @@
+# Preserve upstream license texts verbatim, including original line endings.
+licenses/** -text whitespace=-blank-at-eol

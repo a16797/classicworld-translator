@@ -39,6 +39,8 @@ if ($LASTEXITCODE) { throw 'PyInstaller failed' }
 New-Item -ItemType Directory -Force (Join-Path $Out 'data') | Out-Null
 Copy-Item data\cw-chat-dict.sqlite3, data\默认喊话表.csv, data\icon.png, data\logo-leaf.png (Join-Path $Out 'data')
 Copy-Item 使用说明.txt $Out
+Copy-Item README.md, LICENSE, THIRD_PARTY_NOTICES.md $Out
+Copy-Item -LiteralPath docs, licenses -Destination $Out -Recurse -Force
 
 Write-Host '== 4/5 Secret scan'
 & $Python tools\scan_public.py $Out
